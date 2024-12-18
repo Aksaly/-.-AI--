@@ -74,3 +74,15 @@ function createTestTree(values: (number | null)[]): TreeNode | null {
 // Example usage:
 const tree = createTestTree([1, 2, 2, 3, 4, 4, 3]);
 console.log(isSymmetric(tree)); // Output: true
+
+
+
+function addBinary(a: string, b: string): string {
+    const num1 = BigInt(`0b${a}`); // Перетворюємо рядок на двійкове число
+    const num2 = BigInt(`0b${b}`);
+    const sum = num1 + num2; // Додаємо числа
+    return sum.toString(2); // Перетворюємо результат у двійковий рядок
+}
+
+// Example usage
+console.log(addBinary("1010", "1011")); // Виведе "10101"
